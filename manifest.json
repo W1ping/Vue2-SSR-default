@@ -1,0 +1,13 @@
+{
+  "name": "GuangX-ThinkTank",
+  "short_name": "GuangX-ThinkTank",
+  "icons": [{
+    "src": "/favicon.ico",
+    "sizes": "120x120",
+    "type": "image/x-icon"
+  }],
+  "start_url": "/",
+  "background_color": "",
+  "display": "browser",
+  "theme_color": ""
+}

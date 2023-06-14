@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{ title }}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-transform,no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no viewport-fit=cover">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="keywords" content="{{keywords}}" />
+  <meta name="description" content="{{description}}" />
+</head>
+
+<body>
+  <!--vue-ssr-outlet-->
+  <script type="text/javascript">
+    // decline IE9<
+    function isIE(ver) {
+      var b = document.createElement('b');
+      b.innerHTML = '<!--[if IE ' + ver + ']><i></i><![endif]-->';
+      return b.getElementsByTagName('i').length === 1;
+    }
+    if (isIE(8) || isIE(7) || isIE(6)) {
+      alert("您的浏览器版本过低,为了获得更好的浏览体验,请使用最新版的IE、edge、chrome或firefox等浏览器。");
+    }
+  </script>
+</body>
+
+</html>
