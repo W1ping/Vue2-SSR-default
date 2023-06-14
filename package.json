@@ -9,7 +9,8 @@
     "build": "rimraf dist && cross-env NODE_ENV=production npm run build:client && cross-env NODE_ENV=production npm run build:server",
     "build:dev": "rimraf dist && cross-env NODE_ENV=development npm run build:client && cross-env NODE_ENV=development npm run build:server",
     "build:client": "webpack --config build/webpack.client.config.js --progress --colors --hide-modules",
-    "build:server": "webpack --config build/webpack.server.config.js --progress --colors --hide-modules"
+    "build:server": "webpack --config build/webpack.server.config.js --progress --colors --hide-modules",
+    "commit": "git add . && git-cz"
   },
   "dependencies": {
     "@amap/amap-vue": "^2.0.12",
@@ -49,6 +50,8 @@
     "babel-plugin-transform-remove-console": "^6.9.4",
     "chokidar": "^3.4.0",
     "css-loader": "^3.6.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "cz-customizable": "^5.2.0",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
@@ -73,5 +76,10 @@
     "webpack-hot-middleware": "^2.20.0",
     "webpack-merge": "^4.2.1",
     "webpack-node-externals": "^1.7.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }
